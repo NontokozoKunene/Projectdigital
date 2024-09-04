@@ -1,12 +1,35 @@
 
 
-CREATE TABLE sales (
-     id INT AUTO_INCREMENT PRIMARY KEY,
-    pub_name VARCHAR(50) NOT NULL,
-    beer_name VARCHAR(100) NOT NULL,
-    quantity_sold INT NOT NULL,
-    sale_date DATE NOT NULL
+-- Create the database
+
+
+-- Use the database
+USE beer_sales;
+
+-- Create a table for beer names
+CREATE TABLE beer_names (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
 );
 
-INSERT INTO sales (id, pub_name, beer_name, quantity_sold, sale_date, created_at)
-VALUES (1, 'Pub 1', 'Beer A', 10, '2023-01-01', NOW());
+-- Insert some sample beer names
+INSERT INTO beer_names (name) VALUES ('corona'), ('Lager'), ('Stout');
+
+-- Create a table for pubs
+CREATE TABLE pubs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
+);
+
+-- Insert some sample pubs
+INSERT INTO pubs (name) VALUES ('PUB_A'), ('PUB_B'), ('PUB_C');
+
+-- Create a table for sales
+CREATE TABLE sales (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    pub_id INT,
+    beer_id INT,
+    quantity INT,
+    FOREIGN KEY (pub_id) REFERENCES pubs(id),
+    FOREIGN KEY (beer_id) REFERENCES beer_names(id)
+);

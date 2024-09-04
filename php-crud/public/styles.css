@@ -1,0 +1,79 @@
+body {
+    background-image: url('C:/xampp/htdocs/Projectdigital/php-crud/public/images(6).jpg'); /* Replace with your image path */
+    background-size: cover; /* Adjust to cover the entire screen */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image */
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #b8b3b3;
+}
+
+
+h1, h2 {
+   
+    color: #f7e70ada;
+    
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="number"], select {
+    margin-top: 5px;
+    padding: 5px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f7e70ada;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f7f6f2da;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #e1e1e1;
+}
+
+.action-button {
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #f7e70ada;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background-color: #0e11c9;
+}
