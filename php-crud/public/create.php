@@ -1,6 +1,8 @@
 <?php
 include 'db.php';
 
+// create the sales records
+
 $pub_id = $_POST['pub_id'];
 $beer_id = $_POST['beer_id'];
 $quantity = $_POST['quantity'];

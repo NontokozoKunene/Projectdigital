@@ -7,6 +7,8 @@ $quantity = $_POST['quantity'];
 $beer_name = $_POST['beer_name'];
 
 
+//we updating the sales records 
+
 try{
 
     $sql = "UPDATE sales SET quantity ='$quantity' WHERE id='$sale_id'";
